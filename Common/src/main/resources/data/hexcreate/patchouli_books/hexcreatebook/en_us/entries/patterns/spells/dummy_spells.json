@@ -1,0 +1,18 @@
+{
+  "name": "hexcreate.entry.dummy_spells",
+  "category": "hexcasting:patterns/spells",
+  "icon": "minecraft:spruce_sign",
+  "sortnum": 0,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcreate:congrats",
+      "anchor": "hexcreate:congrats",
+      "input": "entity",
+      "output": "",
+      "text": "hexcreate.page.dummy_spells.congrats"
+    }
+  ]
+}

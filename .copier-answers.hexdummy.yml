@@ -1,0 +1,21 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+# https://copier.readthedocs.io/en/stable/configuring/#the-copier-answersyml-file
+_commit: v0.0.9
+_src_path: gh:FallingColors/hexdummy
+author: WilloTheWeaver
+capitalize_platforms: true
+classname: Hexcreate
+default_branch: main
+description: HexCreate addon for Hex Casting. Adds more integration with the Create
+    Mod.
+display_name: HexCreate
+github_repo: hexcreate
+hexcasting_version: 0.10.3
+homepage_url: https://willotheweaver.github.io/hexcreate
+initial_mod_version: 0.0.1
+java_version: 17
+license: MIT
+mappings_name: Mojmap
+modid: hexcreate
+package: net.hexcreate
+sources_url: https://github.com/WilloTheWeaver/hexcreate

@@ -1,0 +1,27 @@
+# Changes here will be overwritten by Copier. NEVER EDIT MANUALLY
+# See: https://copier.readthedocs.io/en/stable/configuring/#the-copier-answersyml-file
+_commit: v0.1.11
+_src_path: gh:hexdoc-dev/hexdoc-hexcasting-template
+author: WilloTheWeaver
+book_id: hexcreate:hexcreatebook
+default_branch: main
+github_repo: hexcreate
+gradle_mod_version_key: modVersion
+hexdoc_mod_plugin_classname: HexcreateModPlugin
+hexdoc_plugin_classname: HexcreatePlugin
+java_lang:
+    ext: java
+    src: java
+java_package: net/hexcreate
+mod_display_name: HexCreate
+modid: hexcreate
+multiloader: true
+package_export_root: doc/src/hexdoc_hexcreate/_export
+package_name: hexdoc-hexcreate
+package_slug: hexdoc_hexcreate
+package_src: doc/src/hexdoc_hexcreate
+pages_url: https://willotheweaver.github.io/hexcreate
+pattern_regex:
+    per_world_value: registerPerWorld
+    regex: (?P<is_per_world>register|registerPerWorld)\(HexPattern\.fromAngles\("(?P<signature>[qweasd]+)",\s*HexDir\.(?P<startdir>\w+)\),\s*"(?P<name>[^"]+)"?
+pattern_registry: registry/HexcreatePatternRegistry.java

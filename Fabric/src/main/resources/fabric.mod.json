@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "hexcreate",
+  "version": "${version}",
+  "name": "HexCreate",
+  "description": "HexCreate addon for Hex Casting. Adds more integration with the Create Mod.",
+  "authors": [
+    "WilloTheWeaver"
+  ],
+  "contact": {
+    "homepage": "https://willotheweaver.github.io/hexcreate",
+    "sources": "https://github.com/WilloTheWeaver/hexcreate"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.hexcreate.fabric.HexcreateFabric"
+    ],
+    "client": [
+      "net.hexcreate.fabric.HexcreateClientFabric"
+    ]
+  },
+  "mixins": [
+    "hexcreate-common.mixins.json",
+    "hexcreate.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=${minecraftVersion}",
+    "fabricloader": ">=${fabricLoaderVersion}",
+    "fabric-api": "*",
+    "fabric-language-kotlin": ">=${fabricKotlinVersion}",
+    "architectury": ">=${architecturyVersion}",
+    "hexcasting": ">=${hexcastingVersion}"
+  }
+}
