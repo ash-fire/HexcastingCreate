@@ -27,14 +27,15 @@ dependencies {
 
     // Loaders and base APIs
     modImplementation "net.fabricmc:fabric-loader:${project.fabricLoaderVersion}"
-    modApi "net.fabricmc.fabric-api:fabric-api:${fabricApiVersion}"
+    modApi "net.fabricmc.fabric-api:fabric-api:${project.fabricApiVersion}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabricApiVersion}"
     modImplementation("net.fabricmc:fabric-language-kotlin:${project.fabricKotlinVersion}")
-    modApi("dev.architectury:architectury-fabric:${architecturyVersion}") {
+    modApi("dev.architectury:architectury-fabric:${project.architecturyVersion}") {
         // Fix for the "two fabric loaders" loading crash
         exclude group: "net.fabricmc", module: "fabric-loader"
     }
     ///Create
-    modImplementation("com.simibubi.create:create-fabric-${minecraft_version}:${create_fabric_version}")
+    modImplementation("com.simibubi.create:create-fabric-${minecraftVersion}:${create_fabric_version}")
     // Hex Casting stuff
     modImplementation("at.petra-k.hexcasting:hexcasting-fabric-${minecraftVersion}:${hexcastingVersion}") {
         // If not excluded here, calls a nonexistent method and crashes the dev client
@@ -44,7 +45,7 @@ dependencies {
     modImplementation "at.petra-k.paucal:paucal-fabric-${minecraftVersion}:${paucalVersion}"
     modImplementation "vazkii.patchouli:Patchouli:${minecraftVersion}-${patchouliVersion}-FABRIC"
 
-    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-api:${cardinalComponentsVersion}"
+   // modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-api:${cardinalComponentsVersion}"
 
     modImplementation "com.jamieswhiteshirt:reach-entity-attributes:${entityReachVersion}"
     include "com.jamieswhiteshirt:reach-entity-attributes:${entityReachVersion}"
@@ -56,6 +57,8 @@ dependencies {
 
     common(project(path: ":Common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":Common", configuration: "transformProductionFabric")) { transitive false }
+
+
 }
 
 processResources {

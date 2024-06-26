@@ -5,17 +5,16 @@ import at.petrak.hexcasting.api.spell.*
 import at.petrak.hexcasting.api.spell.casting.CastingContext
 import at.petrak.hexcasting.api.spell.iota.Iota
 import com.simibubi.create.AllRecipeTypes
-import com.simibubi.create.content.kinetics.crusher.CrushingRecipe
-import com.simibubi.create.content.kinetics.millstone.MillingRecipe
+import com.simibubi.create.content.kinetics.fan.processing.SplashingRecipe
+import com.simibubi.create.content.kinetics.fan.processing.SplashingRecipe.SplashingWrapper
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo
-import net.minecraft.world.SimpleContainer
 import net.minecraft.world.entity.item.ItemEntity
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.ItemStack
 import java.util.*
 
 
-class OpCrush : SpellAction {
+class OpWash : SpellAction {
     /**
      * The number of arguments from the stack that this action requires.
      */
@@ -67,7 +66,7 @@ class OpCrush : SpellAction {
             // Get all crushing recipes
             var itemStackList:  MutableList<ItemStack> =mutableListOf()
             for (i in 0..item.count){
-                val results: MutableList<ItemStack>? =  crushResult(item.item, ctx) ?: millingResult(item.item, ctx);
+                val results: MutableList<ItemStack>? =  washResult(item.item, ctx) ;
                 if (results != null) {
                     for (result in results) {
                         itemStackList.add(result)
@@ -79,38 +78,23 @@ class OpCrush : SpellAction {
             val results = combineItemStacks(itemStackList)
 
             for (result in results) {
-                   // ctx.caster.sendSystemMessage(result.displayName)
-                    ctx.world.addFreshEntity(ItemEntity(ctx.world, target.x, target.y, target.z, result.copy()))
+                //ctx.caster.sendSystemMessage(result.displayName)
+                ctx.world.addFreshEntity(ItemEntity(ctx.world, target.x, target.y, target.z, result.copy()))
 
-                }
-                target.remove(net.minecraft.world.entity.Entity.RemovalReason.DISCARDED)
-
-
-        //player.sendSystemMessage(Component.translatable(target.displayName.toString()));
-            //HexcreateNetworking.sendToPlayer(player, SetLookPitchS2CMsg(-90f))
-
+            }
+            target.remove(net.minecraft.world.entity.Entity.RemovalReason.DISCARDED)
         }
-        fun crushResult(item: Item, ctx: CastingContext): MutableList<ItemStack>? {
-            val recipeType: IRecipeTypeInfo = AllRecipeTypes.CRUSHING
-
-            val recipe: Optional<CrushingRecipe> = ctx.world.recipeManager.getRecipeFor(
-                    recipeType.getType(), SimpleContainer(ItemStack(item, 1)),
+        fun washResult(item: Item, ctx: CastingContext): MutableList<ItemStack>? {
+            val recipeType: IRecipeTypeInfo = AllRecipeTypes.SPLASHING
+            val itemStack = ItemStack(item, 1)
+            val splashingWrapper = SplashingWrapper()
+            splashingWrapper.setStackInSlot(0, itemStack)
+            val recipe: Optional<SplashingRecipe> = ctx.world.recipeManager.getRecipeFor(
+                    recipeType.getType(), splashingWrapper,
                     ctx.world)
             if (!recipe.isPresent) return null
-            ///if (result.isEmpty()) return null
-            //ctx.caster.sendSystemMessage(recipe.get().rollResults()[0].displayName)
-            return recipe.get().rollResults();
-        }
-        fun millingResult(item: Item, ctx:CastingContext): MutableList<ItemStack>? {
-            val recipeType: IRecipeTypeInfo = AllRecipeTypes.MILLING
-
-            val recipe: Optional<MillingRecipe> = ctx.world.recipeManager.getRecipeFor(
-                    recipeType.getType(), SimpleContainer(ItemStack(item,1)),
-                    ctx.world)
-            if (!recipe.isPresent) return null
-            val result = recipe.get().rollResults();
             //if (result.isEmpty()) return null
-            return result;
+            return recipe.get().rollResults();
         }
         fun combineItemStacks(itemStacks: List<ItemStack>): List<ItemStack> {
             // Group by item type
@@ -125,6 +109,7 @@ class OpCrush : SpellAction {
 
             return combinedStacks
         }
+
     }
 
 }

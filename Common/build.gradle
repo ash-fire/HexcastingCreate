@@ -14,9 +14,10 @@ loom {
 dependencies {
     // We depend on fabric loader here to use the fabric @Environment annotations and get the mixin dependencies
     // Do NOT use other classes from fabric loader
-    modCompileOnly("com.simibubi.create:create-fabric-${minecraft_version}:${create_fabric_version}")
+    modCompileOnly("com.simibubi.create:create-fabric-${minecraftVersion}:${create_fabric_version}")
 
     modImplementation "net.fabricmc:fabric-loader:${project.fabricLoaderVersion}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabricApiVersion}"
     modApi "dev.architectury:architectury:${project.architecturyVersion}"
 
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
