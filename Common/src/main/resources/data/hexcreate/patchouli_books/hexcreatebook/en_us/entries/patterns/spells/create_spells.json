@@ -1,0 +1,50 @@
+{
+  "name": "hexcreate.entry.create_spells",
+  "category": "hexcasting:patterns/spells",
+  "icon": "create:cogwheel",
+  "sortnum": 0,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcreate:crush",
+      "anchor": "hexcreate:crush",
+      "input": "entity",
+      "output": "",
+      "text": "hexcreate.page.create_spells.crush"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcreate:haunt",
+      "anchor": "hexcreate:haunt",
+      "input": "entity",
+      "output": "",
+      "text": "hexcreate.page.create_spells.haunt"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcreate:press",
+      "anchor": "hexcreate:press",
+      "input": "entity",
+      "output": "",
+      "text": "hexcreate.page.create_spells.press"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcreate:wash",
+      "anchor": "hexcreate:wash",
+      "input": "entity",
+      "output": "",
+      "text": "hexcreate.page.create_spells.wash"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcreate:smelt",
+      "anchor": "hexcreate:smelt",
+      "input": "entity",
+      "output": "",
+      "text": "hexcreate.page.create_spells.smelt"
+    }
+  ]
+}

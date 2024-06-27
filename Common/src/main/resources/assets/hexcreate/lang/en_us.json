@@ -1,7 +1,13 @@
 {
-  "item.hexcreate.dummy_item": "Dummy Item",
+  "itemGroup.hexcreate.hexcreate_group": "HexCreate",
+  "item.hexcreate.create_staff.tooltip": "This staff is both a Wrench and a Staff",
   "hexcasting.spell.hexcreate:congrats": "Congrats",
   "hexcasting.spell.hexcreate:crush": "Crush",
+  "hexcasting.spell.hexcreate:wash": "Wash",
+  "hexcasting.spell.hexcreate:haunt": "Haunt",
+  "hexcasting.spell.hexcreate:smelt": "Smelt",
+  "hexcasting.spell.hexcreate:press": "Press",
+  "item.hexcreate.create_staff": "Mechanical Staff",
   "hexcasting.spell.hexcreate:signum": "Signum Purification",
   "hexcasting.spell.book.hexcreate:congrats": "Dum. Spell Actn.",
   "hexcasting.spell.book.hexcreate:signum": "Dum. Actn.",
@@ -10,5 +16,11 @@
   "hexcreate.page.dummy_spells.congrats": "Accepts a player entity, tells them they are doing a good job and makes them look up.",
   "hexcreate.page.dummy_actions.signum": "Accepts a $(l:casting/101)number/$, returns -1 if it is negative, 0 if 0, 1 if positive.",
   "text.hexcreate.congrats": "Good job, %1$s!",
-  "text.hexcreate.congrats.player": "a Player"
+  "text.hexcreate.congrats.player": "a Player",
+  "hexcreate.entry.create_spells": "Create Spells",
+  "hexcreate.page.create_spells.crush": "Accepts an Item Entity and crushes it, as if it had passed through a pair of crushing wheels.",
+  "hexcreate.page.create_spells.wash": "Accepts an Item Entity and washes it, as if it had passed in front of a fan blowing through water",
+  "hexcreate.page.create_spells.smelt": "Accepts an Item Entity and smelts it, as if it had passed in front of a fan blowing through fire.",
+  "hexcreate.page.create_spells.press": "Accepts an Item Entity and presses it, as if it had passed under a mechanical press.",
+  "hexcreate.page.create_spells.haunt": "Accepts an Item Entity and haunts it, as if it had passed in front of a fan blowing through soul fire"
 }

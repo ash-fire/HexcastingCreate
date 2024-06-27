@@ -6,10 +6,7 @@ import at.petrak.hexcasting.api.spell.math.HexDir;
 import at.petrak.hexcasting.api.spell.math.HexPattern;
 import kotlin.Triple;
 import net.hexcreate.casting.patterns.math.OpSignum;
-import net.hexcreate.casting.patterns.spells.OpCongrats;
-import net.hexcreate.casting.patterns.spells.OpCrush;
-import net.hexcreate.casting.patterns.spells.OpItemType;
-import net.hexcreate.casting.patterns.spells.OpWash;
+import net.hexcreate.casting.patterns.spells.*;
 import net.minecraft.resources.ResourceLocation;
 
 import java.util.ArrayList;
@@ -21,14 +18,20 @@ public class HexcreatePatternRegistry {
     public static List<Triple<HexPattern, ResourceLocation, Action>> PATTERNS = new ArrayList<>();
     public static List<Triple<HexPattern, ResourceLocation, Action>> PER_WORLD_PATTERNS = new ArrayList<>();
     // IMPORTANT: be careful to keep the registration calls looking like this, or you'll have to edit the hexdoc pattern regex.
-    public static HexPattern CONGRATS = registerPerWorld(HexPattern.fromAngles("eed", HexDir.WEST), "congrats", new OpCongrats());
-    public static HexPattern SIGNUM = register(HexPattern.fromAngles("edd", HexDir.NORTH_WEST), "signum", new OpSignum());
+    //public static HexPattern CONGRATS = registerPerWorld(HexPattern.fromAngles("eed", HexDir.WEST), "congrats", new OpCongrats());
+    //public static HexPattern SIGNUM = register(HexPattern.fromAngles("edd", HexDir.NORTH_WEST), "signum", new OpSignum());
 
-    public static HexPattern ITEMTYPE = register(HexPattern.fromAngles("wdeeeee", HexDir.WEST), "itemtype", new OpItemType());
+    //public static HexPattern ITEMTYPE = register(HexPattern.fromAngles("wdeeeee", HexDir.WEST), "itemtype", new OpItemType());
 
     public static HexPattern CRUSH = register(HexPattern.fromAngles("qqqwwqqqwqqawdedw", HexDir.WEST), "crush", new OpCrush());
 
     public static HexPattern WASH = register(HexPattern.fromAngles("aqawqadaqdeeewweee", HexDir.SOUTH_EAST), "wash", new OpWash());
+
+    public static HexPattern SMELT = register(HexPattern.fromAngles("eewweeewwddadad", HexDir.NORTH_WEST), "smelt", new OpSmelt());
+
+    public static HexPattern HAUNT = register(HexPattern.fromAngles("aaqawawaeqqqwwqqq", HexDir.SOUTH_EAST), "haunt", new OpHaunt());
+
+    public static HexPattern PRESS = register(HexPattern.fromAngles("qqqwwqqqwaeddqdd", HexDir.WEST), "press", new OpPress());
 
     public static void init() {
         try {

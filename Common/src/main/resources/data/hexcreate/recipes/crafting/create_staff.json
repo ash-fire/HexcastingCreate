@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S",
+    "SH",
+    " E"
+  ],
+  "key": {
+    "#": {
+      "item": "hexcasting:charged_amethyst"
+    },
+    "S": {
+      "item": "create:golden_sheet"
+    },
+    "H": {
+      "item": "create:cogwheel"
+    },
+    "E": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "hexcreate:create_staff",
+    "count": 1
+  }
+}
