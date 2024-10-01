@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:lava",
+    "hexcreate:liquid_amethyst"   // Add your custom lava block if applicable
+  ]
+}

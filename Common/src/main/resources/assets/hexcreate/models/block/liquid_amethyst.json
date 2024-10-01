@@ -1,0 +1,8 @@
+
+{
+  "parent": "forge:block/fluids/base",
+  "textures": {
+    "still": "hexcreate:block/liquid_amethyst_still",
+    "flow": "hexcreate:block/liquid_amethyst_flow"
+  }
+}

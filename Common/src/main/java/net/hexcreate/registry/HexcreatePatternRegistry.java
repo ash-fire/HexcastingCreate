@@ -33,6 +33,7 @@ public class HexcreatePatternRegistry {
 
     public static HexPattern PRESS = register(HexPattern.fromAngles("qqqwwqqqwaeddqdd", HexDir.WEST), "press", new OpPress());
 
+    public static HexPattern SPIN = register(HexPattern.fromAngles("aqqqqwqqwqwqwqwqw", HexDir.EAST), "spin", new OpSpin());
     public static void init() {
         try {
             for (Triple<HexPattern, ResourceLocation, Action> patternTriple : PATTERNS) {

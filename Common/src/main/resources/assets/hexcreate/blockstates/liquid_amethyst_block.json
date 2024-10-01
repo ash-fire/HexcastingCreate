@@ -1,0 +1,6 @@
+
+{
+  "variants": {
+    "level=0": { "model": "hexcreate:block/liquid_amethyst" }
+  }
+}

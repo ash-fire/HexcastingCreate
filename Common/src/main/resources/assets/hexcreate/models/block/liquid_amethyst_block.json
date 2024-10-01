@@ -1,0 +1,9 @@
+
+{
+  "parent": "block/liquid",
+  "textures": {
+    "particle": "hexcreate:block/liquid_amethyst_still",
+    "still": "hexcreate:block/liquid_amethyst_still",
+    "flow": "hexcreate:block/liquid_amethyst_flow"
+  }
+}
